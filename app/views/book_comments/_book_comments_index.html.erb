@@ -1,8 +1,9 @@
 <% book.book_comments.each do |book_comment| %>
   <table class="table">
-    <td class="col-md-3"><%= link_to(book_comment.user) do %>
-      <%= image_tag book_comment.user.get_profile_image(50, 50) %><br>
-      <%= book_comment.user.name %>
+    <td class="col-md-3">
+      <%= link_to(book_comment.user) do %>
+        <%= image_tag book_comment.user.get_profile_image(50, 50) %><br>
+        <%= book_comment.user.name %>
       <% end %>
     </td>
     <td class="col-md-3"><%= book_comment.comment %></td>
